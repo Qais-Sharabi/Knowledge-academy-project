@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration:none ;
+    
+}
+.container{
+    width:calc(100%-330px) ;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header .row{
+    justify-content: space-between;
+}
+.header ul{
+    display: flex;
+}
+.list1 ul{
+    gap:60px
+}
+.list2 ul{
+    gap:24px
+}
