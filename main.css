@@ -1,76 +1,176 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-a{
-    text-decoration:none ;
-    
-}
-.container{
-    width:calc(100% - 330px) ;
-    margin: auto;
-    
+
+a {
+    text-decoration: none;
 
 }
+
+.container {
+    width: calc(100% - 330px);
+    margin: auto;
+
+
+}
+
 @media screen and (min-width:0px) and (max-width: 1040px) {
-    .container{
+    .container {
         width: calc(100% - 150px);
     }
 }
+
 @media screen and (min-width:0px) and (max-width: 600px) {
-    .container{
+    .container {
         width: 100%;
         padding: 0 20px;
     }
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.header .row{
+
+.header .row {
     justify-content: space-between;
 }
-.header ul{
+
+.header ul {
     display: flex;
 }
-.list1 ul{
-    gap:60px
-    
+
+.list1 ul {
+    gap: 60px
 }
-.list2 ul{
-    gap:24px
+
+.list2 ul {
+    gap: 24px
 }
-.header{
-    padding:21.84px
+
+.header {
+    padding: 21.84px
 }
-.list1 a{
+
+.list1 a {
     font-size: 14px;
     font-weight: 400;
     font-family: Inter;
     color: #3A3845;
 }
-.menu{
+
+.menu {
     display: none;
 }
+
 @media screen and (min-width:320px) and (max-width: 1040px) {
 
 
-    .list1{
+    .list1 {
         display: none;
     }
-    .list2{
+
+    .list2 {
         display: none;
     }
-    .menu{
+
+    .menu {
         display: block;
     }
 
-   
+}
+@media screen and (min-width:0px) and (max-width: 800px) {
 
+ .collection{
+    flex:calc((100% - 30px)/2);
+ }
+    
+}
+.bdy{
+   padding: 80px 0; 
+   text-align: center;
+}
+.bdy .row{
+  
+    gap: 30px;
+   
+}
+.collection{
+    width: calc((100% - 90px)/4);
+}
+.collection img{
+    width: 100%;
+
+}
+.collection h2{
+    margin-top: 23px;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3A3845;
+}
+.yes h2{
+    display: flex;
+    width: 255px;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Inter;
+    color: #3A3845;
+    height: 20px;
+    margin-bottom: 24px;
+}
+.yes h3{
+    display: flex;
+    width: 255px;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Inter;
+    color: #807F86;
+    height: 22px;
+    margin-bottom: 58px;
+}
+.yes button{
+    border-style: 1px;
+    padding: 15px 18px 15px 18px;
+    color: #3A3845;
+    width: 255px;
+    background-color: white;
+    border-color: #3A3845;
+    font-weight: 600;
+    font-size: 12px;
+    height:18px ;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+.Best-Sellers .products-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text{
+    margin: 80px auto 48px auto;
+    width: 391px;
+    height: 36px;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 30px;
+    text-align: center;
+    
+}
+.yes img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
