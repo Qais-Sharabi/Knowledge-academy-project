@@ -4,33 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    color: #3A3845;
+}
+
 ul {
     list-style-type: none;
 }
 
 a {
     text-decoration: none;
-
 }
 
 .container {
-    width: calc(100% - 330px);
-    margin: auto;
-
-
-}
-
-@media screen and (min-width:0px) and (max-width: 1040px) {
-    .container {
-        width: calc(100% - 150px);
-    }
-}
-
-@media screen and (min-width:0px) and (max-width: 600px) {
-    .container {
-        width: 100%;
-        padding: 0 20px;
-    }
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .row {
@@ -39,138 +29,150 @@ a {
     align-items: center;
 }
 
+.header {
+    padding: 20px 0;
+}
+
 .header .row {
     justify-content: space-between;
 }
 
 .header ul {
     display: flex;
-}
-
-.list1 ul {
-    gap: 60px
-}
-
-.list2 ul {
-    gap: 24px
-}
-
-.header {
-    padding: 21.84px
+    gap: 30px;
 }
 
 .list1 a {
     font-size: 14px;
     font-weight: 400;
-    font-family: Inter;
     color: #3A3845;
+}
+
+.list2 ul {
+    gap: 20px;
 }
 
 .menu {
     display: none;
 }
 
-@media screen and (min-width:320px) and (max-width: 1040px) {
-
-
-    .list1 {
-        display: none;
-    }
-
-    .list2 {
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
+.bdy {
+    padding: 80px 0;
+    text-align: center;
 }
-@media screen and (min-width:0px) and (max-width: 800px) {
 
- .collection{
-    flex:calc((100% - 30px)/2);
- }
-    
+.bdy .row {
+    gap: 20px;
+    justify-content: center;
 }
-.bdy{
-   padding: 80px 0; 
-   text-align: center;
+
+.collection {
+    flex: 1 1 calc(25% - 20px); 
+    min-width: 200px;
 }
-.bdy .row{
-  
-    gap: 30px;
-   
-}
-.collection{
-    width: calc((100% - 90px)/4);
-}
-.collection img{
+
+.collection img {
     width: 100%;
-
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
-.collection h2{
-    margin-top: 23px;
-    font-family: inter;
+
+.collection h2 {
+    margin-top: 20px;
     font-size: 18px;
     font-weight: 600;
-    color: #3A3845;
 }
-.yes h2{
-    display: flex;
-    width: 255px;
-    flex-wrap: wrap;
-    font-weight: 600;
-    font-size: 14px;
-    font-family: Inter;
-    color: #3A3845;
-    height: 20px;
-    margin-bottom: 24px;
-}
-.yes h3{
-    display: flex;
-    width: 255px;
-    flex-wrap: wrap;
-    font-weight: 400;
-    font-size: 14px;
-    font-family: Inter;
-    color: #807F86;
-    height: 22px;
-    margin-bottom: 58px;
-}
-.yes button{
-    border-style: 1px;
-    padding: 15px 18px 15px 18px;
-    color: #3A3845;
-    width: 255px;
-    background-color: white;
-    border-color: #3A3845;
-    font-weight: 600;
-    font-size: 12px;
-    height:18px ;
-    text-align: center;
-    margin-bottom: 40px;
 
+.text {
+    margin: 80px auto 48px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
 }
-.Best-Sellers .products-container{
+
+.products-container {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.text{
-    margin: 80px auto 48px auto;
-    width: 391px;
-    height: 36px;
-    font-weight: 700;
-    font-style: bold;
-    font-size: 30px;
-    text-align: center;
-    
+.yes {
+    flex: 1 1 calc(25% - 30px); 
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
-.yes img{
+
+.yes img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.yes h2 {
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.yes h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #807F86;
+    height: 50px; 
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yes button {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #3A3845;
+    color: #3A3845;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto; 
+}
+
+.yes button:hover {
+    background-color: #3A3845;
+    color: white;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .list1, .list2 {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .collection, .yes {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    .collection, .yes {
+        flex: 1 1 100%;
+    }
+    .text {
+        font-size: 24px;
+    }
 }
